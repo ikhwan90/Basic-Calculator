@@ -1,29 +1,34 @@
 '''
-Basic calculator for adding, subtracting, multiplying, and dividing
+Basic calculator for adding, subtracting, multiplying, dividing, and power
 the output will be in integer
 '''
 
-x = input('first number: ')
-y = input('second number: ')
+import math
 
-z = input('input the arithmetic operator (+,-,*,/) : ')
+
+x = int(input('first number: '))
+y = int(input('second number: '))
+
+z = input('input the arithmetic operator or statement(+,-,*,/,**) : ')
 
 a = '+'
 b = '-'
 c = '*'
-d = ':'
+d = '/'
+e = '**'
 
 if z == a:
-    print(int(int(x) + int(y)))
+    print(x + y)
 elif z == b:
-    print(int(int(x) - int(y)))
+    print(x - y)
 elif z == c:
-    print(int(int(x) * int(y)))
+    print(x * y)
 elif z == d:
-    print(int(int(x) / int(y)))
+    print(int(x / y))
+elif z == e:
+    print(int(math.pow(x, y)))
 else:
-    print('error !')
-
+    print('invalid operator entered !')
 
 
 
